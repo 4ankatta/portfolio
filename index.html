@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/c4254e24a8.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    
+
+    <!-- Header -->
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="logos.jpg" class="logo" alt="Logo">
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Find me online</a></li>
+                    <li><a href="#portfolio">My Skills</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fas fa-times" onclick="closemenu()"></i>
+                </ul>
+                <i class="fas fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <p>WELCOME to My Portfolio.</p>
+                <h1>Helloo, I'm <span>Charan Katta</span><br></h1>
+                <br>
+                <br>
+                
+                <a href="" download class="btn btn2">Download CV</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images.jpg" alt="Profile Picture">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>A highly motivated and enthusiastic recent graduate in CSE (AI & ML), eager to apply my skills in my work. Passionate about learning and contributing to innovative projects.I'm now aspiring to build a successful career in web development.</p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('Certifications')">Certifications</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+
+                    <div class="tab-contents active-tab" id="Certifications">
+                        <ul> 
+                            <li><span>Salesforce</span><br>Salesforce Certified AI Associate</li>
+                            <li><span>Be10X</span><br>AI Tools Workshop</li>
+                            
+                        </ul>
+                    </div>
+
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2026</span><br>B.Tech in CSE (AI & ML) - Pragati Engineering College, Surampalem</li>
+                            <li><span>2022</span><br>Intermediate - Sri Chaitanya Junior College, Rajahmundry</li>
+                            <li><span>2020</span><br>10th Board -Sri Chaitanya EM School, Mandapeta</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Find Me Online -->
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title">Online Platforms</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fab fa-linkedin"></i>
+                    <h2>LinkedIn</h2>
+                    <p>Connect with me on LinkedIn.</p>
+                    <a href="https://www.linkedin.com/in/charan-katta-4-6b2287259?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">Click here</a>
+                </div>
+                <div>
+                    <i class="fab fa-github"></i>
+                    <h2>GitHub</h2>
+                    <p>Check out my projects.</p>
+                    <a href="https://github.com/4ankatta" target="_blank">Click here</a>
+                </div>
+                <div>
+                    <i class="fas fa-code"></i>
+                    <h2>LeetCode</h2>
+                    <p>See my coding challenges.</p>
+                    <a href="https://leetcode.com/u/K_Charan_4/" target="_blank">Click here</a>
+                </div>
+                <div>
+                    <i class="fab fa-hackerrank"></i>
+                    <h2>HackerRank</h2>
+                    <p>Practice coding with me.</p>
+                    <a href="https://www.hackerrank.com/profile/katta4an" target="_blank">Click here</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- My Skills -->
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">My Skills</h1>
+            <div class="skills-list">
+                <div class="skill">PYTHON</div>
+                <div class="skill">JAVA SCRIPT</div>
+                <div class="skill">HTML</div>
+                <div class="skill">CSS</div>
+                <div class="skill">SQL</div>
+                
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Me -->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fas fa-envelope"></i> katta4@gmail.com</p>
+                    <p><i class="fas fa-phone"></i> +91 9347516139</p>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer -->
+<footer>
+    <div class="container">
+        <p>Thank you for visiting my portfolio!</p>
+        <div class="social-icons">
+        
+        </div>
+    </div>
+</footer>
+
+    <script>
+        function opentab(tabname) {
+            document.querySelectorAll(".tab-links").forEach(link => link.classList.remove("active-link"));
+            document.querySelectorAll(".tab-contents").forEach(content => content.classList.remove("active-tab"));
+            
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+
+        function openmenu() {
+            document.getElementById("sidemenu").style.right = "0";
+        }
+
+        function closemenu() {
+            document.getElementById("sidemenu").style.right = "-200px";
+        }
+    </script>
+</body>
+</html>
